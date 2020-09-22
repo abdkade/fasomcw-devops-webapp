@@ -4,8 +4,7 @@ pipeline {
   stages {
     stage('Cloning Repository'){
       steps{
-        git 'https://github.com/abdkade/fasomcw-devops-webapp.git'
-        
+        checkout scm
         
       }
     }
