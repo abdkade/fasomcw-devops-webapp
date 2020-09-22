@@ -6,7 +6,7 @@ pipeline {
     stage('build image'){
         steps{
             sh 'echo "Getting npm version"'
-            sh 'npm -v'
+            sh 'git clone https://github.com/abdkade/fasomcw-devops-webapp.git'
             sh 'npm install && npm run build'
             sh 'docker login $ACR_LOGIN -u $ACR_USERNAME -p $ACR_PASSWORD'
             sh 'docker build -t $ACR_LOGIN/fasomcwbestapp .'
