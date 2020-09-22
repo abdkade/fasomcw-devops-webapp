@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 
 COPY ["package.json","npm-shrinkwrap.json*","./"]
 
-
+RUN npm install && cp node_modules ../
 
 COPY . .
 
