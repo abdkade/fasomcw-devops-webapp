@@ -2,7 +2,12 @@ pipeline {
   agent any
 
   stages {
-    
+    stage('Cloning Repository'){
+      steps{
+        sh 'git clone https://github.com/abdkade/fasomcw-devops-webapp.git'
+        sh 'cd fasomcw-devops-webapp'
+      }
+    }
   
     stage('build image'){
         steps{
